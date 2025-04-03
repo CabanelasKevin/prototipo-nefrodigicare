@@ -3,81 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrossel de Imagens</title>
+    <title>Protótipo - Galeria de Imagens</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #f4f4f4;
         }
-        .carousel-container {
+        .gallery {
             width: 80%;
-            max-width: 600px;
+            max-width: 800px;
             margin: 20px auto;
-            position: relative;
-            overflow: hidden;
+        }
+        .gallery img {
+            width: 100%;
+            margin-bottom: 15px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        .carousel {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .carousel img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .buttons {
-            margin-top: 10px;
-        }
-        .buttons button {
-            padding: 10px;
-            margin: 5px;
-            border: none;
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
-            border-radius: 5px;
-        }
-        .buttons button:hover {
-            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <h1>Carrossel de Imagens do Protótipo</h1>
-    <div class="carousel-container">
-        <div class="carousel" id="carousel">
-            <img src="https://drive.google.com/uc?export=view&id=1MXNNQJxS3igFxc1iTfObYC-f6kZduvr1" alt="Imagem 1">
-            <img src="https://drive.google.com/uc?export=view&id=1wCh5Id0OWWdNYIn8IaG531Cq_Rct1EZn" alt="Imagem 2">
-            <img src="https://drive.google.com/uc?export=view&id=1z10Z9gkoM3GQZT21A9rN9gPKicjZ6YaC" alt="Imagem 3">
-            <img src="https://drive.google.com/uc?export=view&id=1Y8OigUVv7401Az4Oe-jMtQZ7nV3gqAam" alt="Imagem 4">
-            <img src="https://drive.google.com/uc?export=view&id=1GbVOJbGWcYlxqmwFQWl5jZEkTr9l9uAS" alt="Imagem 5">
-            <img src="https://drive.google.com/uc?export=view&id=1BatZPkKhq1Ctb6fJ0OJpzchZ7aeEppwV" alt="Imagem 6">
-            <img src="https://drive.google.com/uc?export=view&id=1flsjuhHSn_OcvglRLU2YeVu3Uv3AE_VX" alt="Imagem 7">
-        </div>
+    <h1>Galeria de Imagens do Protótipo</h1>
+    <div class="gallery">
+        <img src="https://i.postimg.cc/4xr1PF2L/Captura-de-tela-2025-04-02-224257.png" alt="Imagem 1">
+        <img src="https://i.postimg.cc/QCxgVLVt/Captura-de-tela-2025-04-02-224303.png" alt="Imagem 2">
+        <img src="https://i.postimg.cc/zvtCgdRk/Captura-de-tela-2025-04-02-224307.png" alt="Imagem 3">
+        <img src="https://i.postimg.cc/bJRHzYyW/Captura-de-tela-2025-04-02-224312.png" alt="Imagem 4">
+        <img src="https://i.postimg.cc/4dGQkHgp/Captura-de-tela-2025-04-02-224320.png" alt="Imagem 5">
+        <img src="https://i.postimg.cc/c1XM2J58/Captura-de-tela-2025-04-02-224326.png" alt="Imagem 6">
+        <img src="https://i.postimg.cc/ZKnFSh1s/Captura-de-tela-2025-04-02-224330.png" alt="Imagem 7">
     </div>
-    <div class="buttons">
-        <button onclick="prevImage()">Anterior</button>
-        <button onclick="nextImage()">Próxima</button>
-    </div>
-
-    <script>
-        let index = 0;
-        function showImage() {
-            const carousel = document.getElementById('carousel');
-            const totalImages = document.querySelectorAll('.carousel img').length;
-            index = (index + totalImages) % totalImages;
-            carousel.style.transform = `translateX(${-index * 100}%)`;
-        }
-        function nextImage() {
-            index++;
-            showImage();
-        }
-        function prevImage() {
-            index--;
-            showImage();
-        }
-    </script>
 </body>
 </html>
